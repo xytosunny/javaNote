@@ -58,4 +58,15 @@ int n2 = r.nextInt(11);
 //[1,9)区间的随机数
 int n3 = r.nextInt(8) + 1;
 
-使用
+使用double型参数的构造方法会产生精度丢失，建议使用字符串参数的构造方法BigDecimal(String val)
+"0"与"#"都是占位符，区别是"0"占位符比实际数字的位数多时，实际数值不足的地方用0补上，"#"占位符比实际数字的位数多时，实际值不变
+Arrays类提供了二分查找方法binarySearch，如果待查数组的数据是有序的，可以直接调用Arrays.binarySearch方法，如果待查数组的数据是无序的，可先调用sort方法进行排序，然后再进行二分查找
+对于String对象，关系运算符"=="的作用与Object的equals方法相同，判定两个对象是否为同一个对象实体，String的equals方法则表示判定字符串的值相等
+replace方法返回的是一个新字符串，对原字符串没有做替换
+StringBuffer类的对象的实体内存空间可以自动变化，便于存放变化的字符串
+Java的集合类大致可以分为三类：Set是无序不可重复的集合，List是有序可以重复的集合，Map是映射关系的集合
+Set判定集合中两个元素是否相等，使用equals方法(不使用==)
+HashSet集合中两个元素相等标准：equals判定结果为true，且hashCode值相同
+HashSet集合中两个元素相等判定方法就是重写元素类的equals和hashCode方法
+对于String型元素，TreeSet会自动为其排序，并且元素值唯一
+顺序表与链表侧重点不同，理论上链表在添加和删除操作上效率高于顺序表
